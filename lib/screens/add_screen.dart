@@ -322,7 +322,6 @@ class _AddActivityScreenState extends State<AddActivityScreen> {
       String? imageUrl;
 
       try {
-        // Jika ada gambar, upload dulu ke Firebase Storage
         if (_imagePath != null) {
           final ref = _storage.ref().child('activity_images/${DateTime.now().millisecondsSinceEpoch}.jpg');
           await ref.putFile(File(_imagePath!));
